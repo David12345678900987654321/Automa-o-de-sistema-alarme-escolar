@@ -1,19 +1,19 @@
-"""
-Este módulo é responsável por salvar os horários registrados e
-carregar esses mesmos horários quando o programa é encerrado
-"""
 import json
-import os
+import sys
 from pathlib import Path
-import json
 
 class GerenciadorDeHorario:
 
     def __init__(self):
-        self.arquivo = Path(__file__).parent / "horarios.json"
+        # Caminho da pasta onde o executável está
+        if getattr(sys, 'frozen', False):  # Se estiver rodando como exe
+            self.pasta_base = Path(sys.executable).parent
+        else:  # Se estiver rodando como script Python
+            self.pasta_base = Path(__file__).parent
+
+        self.arquivo = self.pasta_base / "horarios.json"
 
     def salvar_horarios(self, lista):
-
         with open(self.arquivo, "w") as arquivo:
             json.dump(lista, arquivo)
 
