@@ -16,7 +16,6 @@ class VerificadorDeAlarme:
         agora = datetime.now().strftime("%H:%M")
 
         if agora in horarios and agora != self.ultimo_alarme:
-            print("Enviado")
-            #requests.get("http://alarme.local/alarme")
+            requests.get("http://alarme.local/alarme")
 
             self.ultimo_alarme = agora
