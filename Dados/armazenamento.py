@@ -4,18 +4,24 @@ carregar esses mesmos horários quando o programa é encerrado
 """
 import json
 import os
+from pathlib import Path
+import json
+
 class GerenciadorDeHorario:
+
+    def __init__(self):
+        self.arquivo = Path(__file__).parent / "horarios.json"
+
     def salvar_horarios(self, lista):
 
-        with open("horarios.json", "w") as arquivo:
+        with open(self.arquivo, "w") as arquivo:
             json.dump(lista, arquivo)
-
 
     def carregar_horarios(self):
 
-        if os.path.exists("horarios.json"):
+        if self.arquivo.exists():
 
-            with open("horarios.json", "r") as arquivo:
+            with open(self.arquivo, "r") as arquivo:
                 return json.load(arquivo)
 
         return []
