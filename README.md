@@ -1,6 +1,6 @@
 Automação da ativação de um sinal sonoro de uma escola com Python e ESP8266
 
-Este projeto consiste em um aplicativo em Python com interface gráfica que permite ao usuário definir horários para acionar um sinal sonoro de uma escola.
+Este projeto consiste em um aplicativo em Python com interface gráfica que permite ao usuário definir horários para acionar um sinal sonoro de uma escola (utilizado para sinalizar o fim de aulas ou intervalos).
 Quando chega o horário configurado, o programa envia um comando via Wi-Fi para um ESP8266, que ativa o sinal sonoro.
 
 O objetivo do projeto é demonstrar integração entre:
