@@ -45,7 +45,7 @@ Quando coincide com um horário salvo
         ↓
 Requisição HTTP é enviada ao ESP8266
 
-2 - ESP32
+2 - ESP8266
 
 O ESP8266 funciona como um servidor web local.
 
@@ -81,4 +81,4 @@ Requisitos para o aplicativo funcionar:
 
 O computador e o ESP8266 estão na mesma rede Wi-Fi
 
-O mDNS esteja funcionando (Geralmente não funciona no Windows por conta do firewall, então recomenda-se utilizar um softwere externo como o Bonjour da apple
+O mDNS esteja funcionando (Geralmente não funciona no Windows por conta do firewall, então recomenda-se utilizar um softwere externo como o Bonjour da apple)
